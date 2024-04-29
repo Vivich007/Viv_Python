@@ -24,6 +24,9 @@ class myLibrary:
     def displayBooks(self):
         for book in self.books:
             print(book)
+        else:
+            if not self.books:
+                print("Not available in this library")
 
 
 # Borrow book(s) and display library books and current availability
@@ -36,7 +39,8 @@ class myLibrary:
                     print(f"You have borrowed {title} successfully")
                 else:
                     print(f"{title} is currently not available to be borrowed")
-        
+                return
+        print(f"The book {title} is not in tnis library")
 
  # Return book(s) and display all library books and current availability   
 
@@ -48,8 +52,8 @@ class myLibrary:
                     print(f"You have returned {title} successfully")
                 else:
                     print(f"{title} is currently available to be borrowed")
-
-
+                return
+        print(f"The book {title} is not in tnis library")
 # Create an empty list to contain the library books to be added/appended
 
 library = myLibrary()
